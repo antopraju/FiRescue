@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/FiRescue/Scenes/ForestFireScene.unity
+  isLoaded: 1
+  isActive: 1

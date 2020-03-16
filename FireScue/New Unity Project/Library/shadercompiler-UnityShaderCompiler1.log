@@ -1,0 +1,120 @@
+Base path: /Applications/Unity/Hub/Editor/2018.4.15f1/Unity.app/Contents
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=7960 outsize=2577 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=7960 outsize=3009 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3273 outsize=3729 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=68835 outsize=8905 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3905 outsize=6797 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9919 outsize=2949 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9919 outsize=3129 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2949 outsize=4281 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=31899 outsize=4057 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=31899 outsize=13429 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=10989 outsize=19521 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=6546 outsize=3001 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3129 outsize=3853 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=4937 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3061 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3073 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3033 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3753 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3789 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3093 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=47665 outsize=3529 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3925 outsize=4209 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3629 outsize=3817 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3961 outsize=4489 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3581 outsize=3577 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3977 outsize=4241 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3781 outsize=3873 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3629 outsize=3613 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4225 outsize=5025 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4405 outsize=5317 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3637 outsize=3733 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4865 outsize=6277 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=4119 outsize=2853 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2769 outsize=3281 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2061 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2093 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=1617 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2333 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2177 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2193 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2637 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2837 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2845 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2689 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2685 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2273 outsize=1885 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2705 outsize=2721 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2361 outsize=1981 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2617 outsize=2405 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2349 outsize=2029 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2305 outsize=1925 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2781 outsize=3117 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3037 outsize=3285 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3049 outsize=3453 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2933 outsize=3113 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2921 outsize=3329 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2797 outsize=3149 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2825 outsize=3185 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
