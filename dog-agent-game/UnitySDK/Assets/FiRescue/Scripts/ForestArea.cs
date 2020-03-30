@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using MLAgents;
 using TMPro;
 using System;
@@ -13,24 +14,38 @@ public class ForestArea : Area
     public Animal savePrefabSquirrel;
     public Animal savedPrefabRabbit;
     public Animal savePrefabRabbit;
-    public TextMeshPro cumulativeRewardText;
+    public Text cumulativeRewardText;
 
     [HideInInspector]
     public float feedRadius = 1f;
 
     private List<GameObject> saveList;
     private List<GameObject> savedList;
+    private float lastScared;
 
     public AudioSource animalSound;
     public AudioSource dogSound;
+    public AudioSource scaredGirl;
 
+    public void Start()
+    {
+        StartCoroutine(PlayScaredGirl());
+    }
+
+    IEnumerator PlayScaredGirl()
+    {
+        scaredGirl.Play();
+        yield return new WaitForSeconds(scaredGirl.clip.length);
+        scaredGirl.Play();
+        lastScared = System.DateTime.Now.Second;
+    }
 
     public override void ResetArea()
     {
         RemoveAllAnimals();
         PlaceAgent();
         PlaceSafeZone();
-        SpawnAnimals(10);
+        SpawnAnimals(25);
     }
 
     public void RemoveSpecificAnimal(GameObject animalObject)
@@ -57,7 +72,8 @@ public class ForestArea : Area
 
     public static Vector3 ChooseRandomPosition(Vector3 center, float minAngle, float maxAngle, float minRadius, float maxRadius)
     {
-        Vector3 mult = new Vector3(1, 0, 1);
+        Vector3 offset = new Vector3(6, 0, -6);
+        //Vector3 offset = new Vector3(0, 0, 0);
         float radius = minRadius;
 
         if (maxRadius > minRadius)
@@ -65,7 +81,7 @@ public class ForestArea : Area
             radius = UnityEngine.Random.Range(minRadius, maxRadius);
         }
 
-        return center + Quaternion.Euler(0f, UnityEngine.Random.Range(minAngle, maxAngle), 0f) * Vector3.forward * radius;
+        return center + offset + Quaternion.Euler(0f, UnityEngine.Random.Range(minAngle, maxAngle), 0f) * Vector3.forward * radius;
     }
 
     private void RemoveAllAnimals()
@@ -96,7 +112,7 @@ public class ForestArea : Area
         savedList = new List<GameObject>();
     }
 
-    private void PlaceAgent()
+    public void PlaceAgent()
     {
         dogAgent.transform.position = ChooseRandomPosition(transform.position, -45f, 45f, 4f, 9f) + Vector3.up;
         dogAgent.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
@@ -132,6 +148,27 @@ public class ForestArea : Area
 
     private void Update()
     {
-        cumulativeRewardText.text = dogAgent.GetCumulativeReward().ToString("0.00");
+        //cumulativeRewardText.text = "Reward: " + dogAgent.GetCumulativeReward().ToString("0.00");
+        if (System.DateTime.Now.Second - lastScared >= 20)
+        {
+            StartCoroutine(PlayScaredGirl());
+            lastScared = System.DateTime.Now.Second;
+        }
+        
+        if (saveList != null)
+        {
+            for (int i = 0; i < saveList.Count; i++)
+            {
+                if (saveList[i].GetComponentInChildren<Slider>().value == 0)
+                {
+                    Destroy(saveList[i]);
+                    if (dogAgent.PbC.BarValue != 0)
+                    {
+                        dogAgent.PbC.BarValue -= 10;
+                    }
+                }
+            }
+        }
+        
     }
 }

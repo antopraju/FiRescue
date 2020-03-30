@@ -286,4 +286,4 @@ DogLearning:
     buffer_size: 2048
     hidden_units: 256
     beta: 1.0e-2
-    max_steps: 2.0e6
+    max_steps: 1.3e6

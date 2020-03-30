@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MLAgents;
+using UnityEngine.UI;
 using System;
 
 public class DogAgent : Agent
 {
     public GameObject heartPrefab;
+    public Slider dogHealth;
+    public Image fillBar;
+    public ProgressBarCircle PbC;
+    public GameObject HappyKoala;
+    public GameObject SadKoala;
+    public GameObject Squirrel;
+    public GameObject Rabbit;
 
     private ForestArea forestArea;
     private Animation animator;
@@ -14,10 +22,12 @@ public class DogAgent : Agent
     private GameObject safeZone;
     private AudioSource animalSound;
     private AudioSource dogSound;
-    private float movementSpeed = 2.5f;
+    private float movementSpeed = 3.0f;
     private int saved_id = 0;
     private int jump_second;
     private bool jumped = false;
+    private float lastWallCollision=0.0f;
+    private float lastSaved = 0.0f;
     Rigidbody rb;
 
     private bool isFull; // If true, penguin has a full stomach
@@ -69,6 +79,8 @@ public class DogAgent : Agent
     public override void AgentReset()
     {
         isFull = false;
+        PbC.BarValue = 0;
+        lastSaved = System.DateTime.Now.Second;
         forestArea.ResetArea();
     }
 
@@ -110,6 +122,13 @@ public class DogAgent : Agent
         safeZone = forestArea.safeZone;
         safeZone.GetComponent<Animation>().CrossFade("idle");
         saved_id = 0;
+        PbC.BarValue = 0;
+        SadKoala.SetActive(true);
+        HappyKoala.SetActive(false);
+        lastWallCollision = 0.0f;
+        lastSaved = System.DateTime.Now.Second;
+        Rabbit.SetActive(false);
+        Squirrel.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -124,19 +143,70 @@ public class DogAgent : Agent
             safeZone.GetComponent<Animation>().Play();
             jumped = false;
         }
+        if (dogHealth.value <= 0.3f)
+        {
+            fillBar.color = Color.red;
+        }
+        if (PbC.BarValue < 50)
+        {
+            SadKoala.SetActive(true);
+            HappyKoala.SetActive(false);
+        }
+        if (PbC.BarValue >= 50)
+        {
+            SadKoala.SetActive(false);
+            HappyKoala.SetActive(true);
+        }
+        if (dogHealth.value == 0)
+        {
+            Done();
+        }
+        /*
+        if (System.DateTime.Now.Second - lastSaved >= 15)
+        {
+            lastSaved = System.DateTime.Now.Second;
+            forestArea.PlaceAgent();
+        }
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        string tag = collision.transform.tag;
+        
+        if (collision.transform.CompareTag("wall"))
+        {
+            if (lastWallCollision == 0.0f)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+            }
+            else if (System.DateTime.Now.Second - lastWallCollision >= 1.5 && System.DateTime.Now.Second - lastWallCollision <= 8)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+                //Done();
+                forestArea.PlaceAgent();
+            }
+            else if(System.DateTime.Now.Second - lastWallCollision > 8)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+            }
+        }
+        
         if (collision.transform.CompareTag("saveRabbit"))
         {
-            saved_id = 0;
+            if (!isFull)
+            {
+                saved_id = 0;
+            }
             PickAnimal(collision.gameObject);
             AddVectorObs(Vector3.Distance(collision.transform.position, transform.position));
         }
         else if (collision.transform.CompareTag("saveSquirrel"))
         {
-            saved_id = 1;
+            if (!isFull)
+            {
+                saved_id = 1;
+            }
             PickAnimal(collision.gameObject);
             AddVectorObs(Vector3.Distance(collision.transform.position, transform.position));
         }
@@ -151,10 +221,18 @@ public class DogAgent : Agent
     {
         if (isFull) return; // Can't save another animal while full
         isFull = true;
-
+        if (saved_id == 0)
+        {
+            Rabbit.SetActive(true);
+        }
+        else if (saved_id == 1)
+        {
+            Squirrel.SetActive(true);
+        }
         forestArea.RemoveSpecificAnimal(animalObject);
         dogSound.Play();
-        AddReward(2.5f);
+        AddReward(3.5f);
+        //AddReward(0.7f);
     }
 
     private void DropAnimal(int i)
@@ -164,6 +242,8 @@ public class DogAgent : Agent
             return; // Nothing to save
         }
         jumped = true;
+        Rabbit.SetActive(false);
+        Squirrel.SetActive(false);
         isFull = false;
         // Spawn heart
         GameObject heart = Instantiate<GameObject>(heartPrefab);
@@ -175,7 +255,10 @@ public class DogAgent : Agent
         Destroy(heart, 4f);
         animalSound.Play();
         forestArea.SaveAnimal(transform.position, i);
-        AddReward(1.5f);
+        AddReward(3.5f);
+        //AddReward(0.5f);
+        PbC.BarValue += 10;
+        lastSaved = System.DateTime.Now.Second;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -183,5 +266,8 @@ public class DogAgent : Agent
         dogSound.Play();
         AddVectorObs(Vector3.Distance(other.transform.position, transform.position));
         AddReward(-4f);
+        //AddReward(-1f);
+        dogHealth.value -= 0.01f;
+        //Done();
     }
 }
