@@ -14,11 +14,12 @@ public class DogAgent : Agent
     private GameObject safeZone;
     private AudioSource animalSound;
     private AudioSource dogSound;
-    private float movementSpeed = 2.5f;
+    private float movementSpeed = 4.0f;
     private int saved_id = 0;
     private int jump_second;
     private bool jumped = false;
     Rigidbody rb;
+    private float lastWallCollision = 0.0f;
 
     private bool isFull; // If true, penguin has a full stomach
 
@@ -110,6 +111,7 @@ public class DogAgent : Agent
         safeZone = forestArea.safeZone;
         safeZone.GetComponent<Animation>().CrossFade("idle");
         saved_id = 0;
+        lastWallCollision = 0.0f;
     }
 
     private void FixedUpdate()
@@ -145,6 +147,24 @@ public class DogAgent : Agent
             DropAnimal(saved_id);
             AddVectorObs(Vector3.Distance(collision.transform.position, transform.position));
         }
+        /*
+        else if (collision.transform.CompareTag("wall"))
+        {
+            if (lastWallCollision == 0.0f)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+            }
+            else if (System.DateTime.Now.Second - lastWallCollision >= 1.5 && System.DateTime.Now.Second - lastWallCollision <= 8)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+                Done();
+            }
+            else if (System.DateTime.Now.Second - lastWallCollision > 8)
+            {
+                lastWallCollision = System.DateTime.Now.Second;
+            }
+        }
+        */
     }
 
     private void PickAnimal(GameObject animalObject)
@@ -154,7 +174,8 @@ public class DogAgent : Agent
 
         forestArea.RemoveSpecificAnimal(animalObject);
         dogSound.Play();
-        AddReward(2.5f);
+        //AddReward(2.5f);
+        AddReward(3.5f);
     }
 
     private void DropAnimal(int i)
@@ -168,14 +189,15 @@ public class DogAgent : Agent
         // Spawn heart
         GameObject heart = Instantiate<GameObject>(heartPrefab);
         heart.transform.parent = transform.parent;
-        heart.transform.position = safeZone.transform.position + Vector3.up;
+        heart.transform.position = safeZone.transform.position + Vector3.up + new Vector3(0,1,0);
         safeZone.GetComponent<Animation>()["jump"].speed = 0.3f;
         safeZone.GetComponent<Animation>().CrossFade("jump");
         jump_second = System.DateTime.Now.Second;
         Destroy(heart, 4f);
         animalSound.Play();
         forestArea.SaveAnimal(transform.position, i);
-        AddReward(1.5f);
+        //AddReward(1.5f);
+        AddReward(3.5f);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -187,8 +187,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84658103}
-  m_LocalRotation: {x: 0.2771513, y: 0.54937184, z: -0.19966532, w: 0.76256907}
-  m_LocalPosition: {x: -18.56204, y: 10.547934, z: -5.8865623}
+  m_LocalRotation: {x: 0.24059652, y: 0.013965549, z: -0.003462304, w: 0.9705186}
+  m_LocalPosition: {x: 45.692257, y: 44.52217, z: -163.63199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -255,6 +255,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45cef92c87acd9b41a6f177d2cb5408e, type: 3}
+--- !u!82 &431524533 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2146378058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &441867147 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697775317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &474195434 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 627396245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &575176005 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 627396245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &585657889 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5596908840280128170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627396245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -397,8 +427,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 575176005}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 474195434}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &821831867 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 884669375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &823519484
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -610,8 +656,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1000151985}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 821831867}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &894289727 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063182662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &908806393 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808801286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &984488195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -627,7 +695,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -754,8 +822,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1314571254}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 1759160166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &1000151985 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 884669375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1063182662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,7 +855,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -898,8 +982,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 894289727}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 1403705917}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &1101482591 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697775317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1255337326 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1255337326, guid: 31ff31bb39823da489b9782eec64f94a,
@@ -911,6 +1011,18 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1273836371, guid: 31ff31bb39823da489b9782eec64f94a,
     type: 3}
   m_PrefabInstance: {fileID: 1689005186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1314571254 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 984488195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1403705917 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063182662}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1445739066
 PrefabInstance:
@@ -927,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -1054,8 +1166,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1469770091}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 1722049381}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &1469770091 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1445739066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1589325126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1071,7 +1199,7 @@ PrefabInstance:
     - target: {fileID: 1226204470063144531, guid: 593fd771004b78841924f9ea64dd8c6e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6392597340840512635, guid: 593fd771004b78841924f9ea64dd8c6e,
         type: 3}
@@ -1130,6 +1258,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 593fd771004b78841924f9ea64dd8c6e, type: 3}
+--- !u!82 &1599773443 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5596908840280128170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1689005186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1141,6 +1275,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Learning Area
       objectReference: {fileID: 0}
+    - target: {fileID: 1377791503, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273836371, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b012c7f0761dda4fa9b1b8922bc1228, type: 3}
     - target: {fileID: 1377791505, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1213,49 +1355,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog Cry Sound
       objectReference: {fileID: 0}
-    - target: {fileID: 1273836371, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1b012c7f0761dda4fa9b1b8922bc1228, type: 3}
     - target: {fileID: 1360941739, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 217287126, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2091682000, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 600927111, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1904684833, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1336324823, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1163779312, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1306258407, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65728177, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1056931738, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ff31bb39823da489b9782eec64f94a, type: 3}
@@ -1274,7 +1412,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -1401,8 +1539,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1101482591}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 441867147}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &1722049381 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1445739066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1759160166 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 984488195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1808801286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1418,7 +1578,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -1545,8 +1705,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1999848369}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 908806393}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!82 &1999848369 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7202025559511301588, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808801286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2002362504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1558,6 +1734,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DogTrainedAcademy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958165398258603600, guid: 8343f551cc9787446b4e28c4160779d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3511920748288828545, guid: 8343f551cc9787446b4e28c4160779d0,
         type: 3}
@@ -1616,6 +1797,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8343f551cc9787446b4e28c4160779d0, type: 3}
+--- !u!82 &2047511556 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2341974640724122823, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2146378058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2146378058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1631,7 +1818,7 @@ PrefabInstance:
     - target: {fileID: 7705092985317666861, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 894591853299952268, guid: d8ce17bc554051b4c909faa570ae7dfb,
         type: 3}
@@ -1758,6 +1945,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 431524533}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 2047511556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
 --- !u!1001 &5596908840280128170
@@ -1847,5 +2044,35 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: animalSound
+      value: 
+      objectReference: {fileID: 1599773443}
+    - target: {fileID: 7705092985317666862, guid: d8ce17bc554051b4c909faa570ae7dfb,
+        type: 3}
+      propertyPath: dogSound
+      value: 
+      objectReference: {fileID: 585657889}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ce17bc554051b4c909faa570ae7dfb, type: 3}
+--- !u!1 &5596908840280128171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2110727977, guid: d8ce17bc554051b4c909faa570ae7dfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5596908840280128170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5596908840280128172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596908840280128171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f710d360a49461cad67ff5e6bcefe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  record: 1
+  demonstrationName: tryTrainDOg

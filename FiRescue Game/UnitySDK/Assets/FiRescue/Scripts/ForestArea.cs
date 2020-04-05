@@ -23,6 +23,7 @@ public class ForestArea : Area
 
     public AudioSource animalSound;
     public AudioSource dogSound;
+    private System.Random _rnd = new System.Random();
 
 
     public override void ResetArea()
@@ -30,7 +31,7 @@ public class ForestArea : Area
         RemoveAllAnimals();
         PlaceAgent();
         PlaceSafeZone();
-        SpawnAnimals(10);
+        SpawnAnimals(20);
     }
 
     public void RemoveSpecificAnimal(GameObject animalObject)
@@ -50,7 +51,7 @@ public class ForestArea : Area
         {
             saveObject = Instantiate<GameObject>(savedPrefabSquirrel.gameObject);
         }
-        saveObject.transform.position = pos;
+        saveObject.transform.position = new Vector3(pos.x + 1, 0, pos.z + 1);
         saveObject.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
         savedList.Add(saveObject);
     }
@@ -98,12 +99,18 @@ public class ForestArea : Area
 
     private void PlaceAgent()
     {
-        dogAgent.transform.position = ChooseRandomPosition(transform.position, -45f, 45f, 4f, 9f) + Vector3.up;
+        //dogAgent.transform.position = new Vector3(_rnd.Next(-6, 13), 0, _rnd.Next(5, 9));
+        ////dogAgent.transform.position = new Vector3(_rnd.Next(0, 33), 0, _rnd.Next(50, 52));
         dogAgent.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
+        dogAgent.transform.position = ChooseRandomPosition(transform.position, -45f, 45f, 4f, 9f) + Vector3.up;
+        //dogAgent.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
     }
 
     private void PlaceSafeZone()
     {
+        //safeZone.transform.position = new Vector3(6, 0, 9.5f);
+        //safeZone.transform.position = new Vector3(_rnd.Next(-6, 13), 0, _rnd.Next(5, 9));
+        ////safeZone.transform.position = new Vector3(_rnd.Next(0, 33), 0, _rnd.Next(50, 52));
         safeZone.transform.position = ChooseRandomPosition(transform.position, -45f, 45f, 4f, 9f) + Vector3.up * 0.5f;
         //safeZone.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
@@ -113,6 +120,7 @@ public class ForestArea : Area
         for (int i = 0; i < count / 2; i++)
         {
             GameObject saveObject = Instantiate<GameObject>(savePrefabSquirrel.gameObject);
+            ////saveObject.transform.position = new Vector3(_rnd.Next(0, 33), 0, _rnd.Next(20, 42));
             saveObject.transform.position = ChooseRandomPosition(transform.position, 100f, 260f, 2f, 13f) + Vector3.up;
             saveObject.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
             saveObject.transform.parent = transform;
@@ -121,6 +129,7 @@ public class ForestArea : Area
         for (int i = 0; i < count / 2; i++)
         {
             GameObject saveObject = Instantiate<GameObject>(savePrefabRabbit.gameObject);
+            ////saveObject.transform.position = new Vector3(_rnd.Next(0, 33), 0, _rnd.Next(20, 42));
             saveObject.transform.position = ChooseRandomPosition(transform.position, 100f, 260f, 2f, 13f) + Vector3.up;
             saveObject.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
             saveObject.transform.parent = transform;
